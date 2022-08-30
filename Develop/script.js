@@ -1,25 +1,10 @@
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-// Random interger & items
-function randomInt(min, max) {
-  if (!max) {
-    max = min
-    min - 0
-  }
-  var rand = Math.random()
-  return Math.floor(min*(1 - rand) + rand*max);
-}
-
-function getRandomItem(list) {
-  return list[randomInt(list.length)]
-}
-
 // Assignment code here
 function generatePassword() {
 // How many characters would like between 8 to 128?
 var userInput = window.prompt("How many characters would you like for your password?");
-
 var passwordLength = parseInt(userInput);
 
 if (isNaN(passwordLength)) {
@@ -33,13 +18,13 @@ if (passwordLength < 8 || passwordLength > 128) {
 }
 
 // prompt user to confirm if they want lower case characters
-var userSelectsLowercase = window.confirm("Would you like to include lowercase characters in your password?");
+var userSelectsLowercase = window.confirm("Would you like to include lowercase characters to your password?");
 // prompt user to confirm if they want upper case characters
-var userSelectsUppercase = window.confirm("Would you like to include uppercase characters in your password?");
+var userSelectsUppercase = window.confirm("Would you like to include uppercase characters to your password?");
 //prompt user to confirm if they want numerical characters
-var userSelectsNumbers = window.confirm("Would like to include numbers in your password?");
+var userSelectsNumbers = window.confirm("Would like to include numbers to your password?");
 // prompt user to confirm if they want special characters
-var userSelectsSpecial = window.confirm("Would you like to include special characters in your password?");
+var userSelectsSpecial = window.confirm("Would you like to include special characters to your password?");
 
 // variables list
 var lowercaseList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -49,6 +34,7 @@ var specialList = ["|", "!", "#", "$", "%", "^", "&", "*", "_", "-"];
 
 // if statements
 var optionsList = []
+console.log(optionsList)
 
 if (userSelectsLowercase === true) {
   optionsList.push(lowercaseList);
@@ -66,20 +52,15 @@ if (userSelectsSpecial === true) {
   optionsList.push(specialList);
 }
 
-if (optionsList.length === 0) {
-  optionsList.push(lowercaseList);
-}
-
-// Generate Password 
+// Generate Password for the User
 var generatedPassword = ""
 
 for (var i = 0; i < passwordLength; i++) {
   var randomList = getRandomItem(optionsList);
-  var randomChar = getRandomItem(randomList);
+  var randdomChar = getRandomItem(randomList);
   generatedPassword += randomChar
 }
 
-return generatedPassword
 }
 
 // Write password to the #password Input
@@ -89,7 +70,9 @@ function writePassword() {
 
   passwordText.value = password;
 
+
 }
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
