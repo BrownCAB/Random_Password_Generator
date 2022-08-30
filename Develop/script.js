@@ -3,30 +3,60 @@ var generateBtn = document.querySelector("#generate");
 
 // Assignment code here
 function generatePassword() {
- 
-  var userInput = window.prompt("Hey! you clicked the Button!")
+// How many characters would like between 8 to 128?
+var userInput = window.prompt("How many characters would you like for your password?");
+var passwordLength = parseInt(userInput);
 
-  console.log(userInput)
+if (isNaN(passwordLength)) {
+  window.alert("Please input a number.");
+  return
 }
 
+if (passwordLength < 8 || passwordLength > 128) {
+  window.alert("Please select a number between 8 to 128 characters.");
+  return
+}
 
+// prompt user to confirm if they want lower case characters
+var userSelectsLowercase = window.confirm("Would you like to include lowercase characters to your password?");
+// prompt user to confirm if they want upper case characters
+var userSelectsUppercase = window.confirm("Would you like to include uppercase characters to your password?");
+//prompt user to confirm if they want numerical characters
+var userSelectsNumbers = window.confirm("Would like to include numbers to your password?");
+// prompt user to confirm if they want special characters
+var userSelectsSpecial = window.confirm("Would you like to include special characters to your password?");
 
-// 1 Prompt the user for the password criteria
+// variables list
+var lowercaseList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var uppercaseList = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var numbersList = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var specialList = ["|", "!", "#", "$", "%", "^", "&", "*", "_", "-"];
 
-// a Password Length 8-128 chararters
-// var length = Number(prompt("Enter a password length between 8 and 128")),
-// b lowercase, uppercase, numeric, and/or special characters
-//charType = prompt("Enter a character type: special, numeric, uppercase, lowercase."),
+// if statements
+var optionsList = []
+console.log(optionsList)
 
-// 2 validate the input
-// 3 genetate password
-//password = generatePassword();
+if (userSelectsLowercase === true) {
+  optionsList.push(lowercaseList);
+} 
 
+if (userSelectsUppercase === true) {
+  optionsList.push(uppercaseList);
+}
 
-// 4 display genetated password on the page
- // return "Generated password will go here!";
+if (userSelectsNumbers === true) {
+  optionsList.push(numbersList);
+}
 
-// Write password to the #password input
+if (userSelectsSpecial === true) {
+  optionsList.push(specialList);
+}
+
+// Generate Password for the User
+
+}
+
+// Write password to the #password Input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
