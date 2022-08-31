@@ -7,7 +7,7 @@ function generatePassword() {
 var userInput = window.prompt("How many characters would you like for your password?");
 var passwordLength = parseInt(userInput);
 
-if (isNaN(passwordLength)) {
+if (Number.isNaN(passwordLength)) {
   window.alert("Please input a number.");
   return
 }
@@ -25,6 +25,7 @@ var userSelectsUppercase = window.confirm("Would you like to include uppercase c
 var userSelectsNumbers = window.confirm("Would like to include numbers to your password?");
 // prompt user to confirm if they want special characters
 var userSelectsSpecial = window.confirm("Would you like to include special characters to your password?");
+// prompt user to validate atleast one prompt
 
 // variables list
 var lowercaseList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -51,16 +52,27 @@ if (userSelectsNumbers === true) {
 if (userSelectsSpecial === true) {
   optionsList.push(specialList);
 }
+// Make sure that aleast one character of each array is picked
+
 
 // Generate Password for the User
 var generatedPassword = ""
 
 for (var i = 0; i < passwordLength; i++) {
   var randomList = getRandomItem(optionsList);
-  var randdomChar = getRandomItem(randomList);
+  var randomChar = getRandomItem(randomList);
+  console.log(randomList)
+  console.log(randomChar)
   generatedPassword += randomChar
+  console.log(generatedPassword)
+}
+ return generatedPassword
 }
 
+function getRandomItem(someArray) {
+  var randomIndex = Math.floor(Math.random()*someArray.length)
+  console.log("randomIndex", randomIndex)
+  return someArray[randomIndex]
 }
 
 // Write password to the #password Input
