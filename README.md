@@ -14,7 +14,7 @@ I learned the fundamentals of a Jaavascript that is used to make webpages more d
 2. Modify the code based on the Acceptance criteria.
 3. Add, Commit, and Push Repo to Github.
 4. Full fill the acceptances criteria grading requirements.
-5. Follow the instrucations to submit the Challenge for review.
+5. Follow the instructions to submit the Challenge for review.
 
 ## Usage
 Provide instructions and examples for use. Include screenshots as needed. 
