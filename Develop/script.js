@@ -19,7 +19,7 @@ var passwordLength = parseInt(userInput);
  
 
 if (userInput >= 8) {
-  window.confirm("Please confirm " + userInput + " is correct!")
+  window.confirm("Please confirm " + userInput + " is correct!");
   } 
   
 if (isNaN(passwordLength)) {
@@ -48,7 +48,7 @@ var lowercaseList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
 var uppercaseList = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 if (!userWantsNumbers && !userWantsSymbols && !userWantsLowercase && !userWantsUppercase) {
-  window.alert("You must choose atleast one character!")
+  window.alert("You must choose atleast one character!");
   return ""
 }
 
@@ -56,39 +56,40 @@ if (!userWantsNumbers && !userWantsSymbols && !userWantsLowercase && !userWantsU
 // if statements
 var optionsList = [];
 
-var result = []
+var result = [];
+
 // Generate Password 
-var generatedPassword = []
+var generatedPassword = [];
 
 if (userWantsNumbers) {
   optionsList = optionsList.concat(numbersList);
-  result.push(getRandomItem(numbersList))
+  result.push(getRandomItem(numbersList));
 }
 
 if (userWantsSymbols) {
   optionsList = optionsList.concat(specialList);
-  result.push(getRandomItem(specialList))
+  result.push(getRandomItem(specialList));
 }
 
 if (userWantsLowercase) {
   optionsList = optionsList.concat(lowercaseList);
-  result.push(getRandomItem(lowercaseList))
+  result.push(getRandomItem(lowercaseList));
 } 
 
 if (userWantsUppercase) {
   optionsList = optionsList.concat(uppercaseList);
-  result.push(getRandomItem(uppercaseList))
+  result.push(getRandomItem(uppercaseList));
 }
 
 for (var i = 0; i < passwordLength; i++) {
   var randomChar = getRandomItem(optionsList);
-  generatedPassword.push(randomChar)
+  generatedPassword.push(randomChar);
 }
 
 for (var i = 0; i < result.length; i++) {
-   generatedPassword[i] = result[i]
+   generatedPassword[i] = result[i];
 }
- return generatedPassword.join("")
+ return generatedPassword.join("");
 }
 
 // Write password to the #password input
