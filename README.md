@@ -1,17 +1,17 @@
 # <Random Password Generator>
 
 ## Description
-Based on the User Story 
+Based on the User Story as an employee with access to sensitive data I want to randomly generate a password that meets the acceptance critieria to provide pretty security. 
 
-This project is going to challenge 
+This project is going to challenge my Javascript knowledge in order to code a web based script application that can randomly generate a strong password to seccure sensitive data.
 
-I am trying to create
+I am going create a randomly generated password to secure the sensitive data.
 
-I learned the fundamentals of a
+I learned the fundamentals of a Jaavascript that is used to make webpages more dynamic and interactive by manuplating HTML to respond to events.
 
 ## Installation
 1. Clone the starter code.
-2. Refactoed the code based on the criteria.
+2. Modify the code based on the Acceptance criteria.
 3. Add, Commit, and Push Repo to Github.
 4. Full fill the acceptances criteria grading requirements.
 5. Follow the instrucations to submit the Challenge for review.
@@ -21,7 +21,7 @@ Provide instructions and examples for use. Include screenshots as needed.
 
     
     Screenshoot
-    ![screenshot](assets/images/screenshot)
+    ![screenshot](Develop/screenshot)
 
     Deployed project link
     https://browncab.github.io/Random_Password_Generator/
@@ -29,7 +29,7 @@ Provide instructions and examples for use. Include screenshots as needed.
     
 
 ## Credits
-AskBCS, Tutor and google.
+AskBCS, Teacher, Tutor and google.
 
 ## License
 Please refer to the LICENSE in the repo.
