@@ -1,7 +1,7 @@
 # <Random Password Generator>
 
 ## Description
-Based on the User Story as an employee with access to sensitive data I want to randomly generate a password that meets the acceptance critieria to provide pretty security. 
+Based on the User Story as an employee with access to sensitive data I want to randomly generate a strong password that meets the acceptance critieria to secure the data. 
 
 This project is going to challenge my Javascript knowledge in order to code a web based script application that can randomly generate a strong password to seccure sensitive data.
 
@@ -12,8 +12,8 @@ I learned the fundamentals of a Jaavascript that is used to make webpages more d
 ## Installation
 1. Clone the starter code.
 2. Modify the code based on the Acceptance criteria.
-3. Add, Commit, and Push Repo to Github.
-4. Full fill the acceptances criteria grading requirements.
+3. Full fill the acceptances criteria grading requirements.
+4. Add, Commit, and Push Repo to Github and deploy it with Githubpages.
 5. Follow the instructions to submit the Challenge for review.
 
 ## Usage
